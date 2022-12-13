@@ -18,3 +18,6 @@
   ## Demonstration Video
   This video will demonstrate the functionality of this application:
 [Demo Video](Develop/Untitled_%20Dec%2013,%202022%203_01%20AM.webm)
+  ## Video Link
+  This is a link to the demonstration video:
+  https://drive.google.com/file/d/1coylbpSAeQoN0_D0ju_gpUXLVShUSZkO/view
