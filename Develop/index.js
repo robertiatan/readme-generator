@@ -131,7 +131,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'What are some tests to run?',
+        message: 'What are some tests for your application?',
         validate: testsInput => {
             if (testsInput) {
                 return true;
@@ -141,25 +141,18 @@ const questions = [
             }
         }
     },
-    {
-        type: 'input',
-        name: 'questions',
-        message: 'What are common questions about your project?',
-        validate: testsInput => {
-            if (testsInput) {
-                return true;
-            } else {
-                console.log('Please provide questions.');
-                return false;
-            }
-        }
-    },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-
-}
+const writeFile = data => {
+    fs.writeFile('README.MD', data, err => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('The README file has been created.');
+        }
+    })
+};
 
 // TODO: Create a function to initialize app
 function init() {
@@ -167,4 +160,13 @@ function init() {
 }
 
 // Function call to initialize app
-init();
+init()
+.then(userInput => {
+    return generateMarkdown(userInput);
+})
+.then(readmeInfo => {
+    return writeFile(readmeInfo);
+})
+.catch(err => {
+    console.log(err);
+});
