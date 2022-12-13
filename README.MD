@@ -2,11 +2,7 @@
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
-  * [Usage](#usage)
-  * [Licenses](#licenses)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
+  * [Demonstration Video](#demonstration-video)
   ## Description
   This is a README Generator created in node.js. It will ask the user questions about what content they want to include in their README file, and will then generate the file within the local directory.
   ## Installation
