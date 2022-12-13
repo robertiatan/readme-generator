@@ -28,8 +28,8 @@ function renderLicenseSection(license) {
   if (!license) {
     return ``;
   } else {
-    return `## Licenses
-    This project uses the ${license} license.`
+    return `## License
+    This project is covered under the ${license} license.`
   }
 }
 

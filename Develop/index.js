@@ -60,7 +60,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: "Enter your project description here:",
+        message: "Please enter your project description here:",
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -91,7 +91,7 @@ const questions = [
             if (usageInput) {
                 return true;
             } else {
-                console.log('Providing instructions for usage will help users properly navigate your project. Please try again.');
+                console.log('Please enter instructions for usage.');
                 return false;
             }
         }
@@ -105,7 +105,7 @@ const questions = [
     {
         type: 'list',
         name: 'licenses',
-        message: 'What license would you like to include?',
+        message: 'Which license would you like to include?',
         choices: ['MIT', 'GPL', 'CC--0'],
         when: ({ confirmLicenses }) => {
             if (confirmLicenses) {
@@ -119,8 +119,8 @@ const questions = [
         type: 'input',
         name: 'contributing',
         message: 'How can others contribute to this project?',
-        validate: contributionInput => {
-            if (contributionInput) {
+        validate: contributeInput => {
+            if (contributeInput) {
                 return true;
             } else {
                 console.log('Please provide instructions on how others can contribute to your project.');
